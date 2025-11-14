@@ -33,13 +33,13 @@
       <nav class="navbar">
         <div class="navbar-left-side-small-container">
           <img class="logo" src="assets/Emblem-SMALL.png" alt="Logo" />
-          <span class="navbar-address hideOnMobile"
-            ><a target="_blank" href="https://www.ballymagarvey.ie/"
-              >Ballymagarvey Village <br />
+          <span class="navbar-address hideOnMobile">
+            <a target="_blank" href="https://www.ballymagarvey.ie/">
+              Ballymagarvey Village <br />
               Balrath, Navan, Co. Meath, C15V67P <br />
-              Ireland</a
-            ></span
-          >
+              Ireland
+            </a>
+          </span>
         </div>
 
         <span class="navbar-middle-text">Chef Christian</span>
@@ -55,25 +55,25 @@
           <li class="navbar-item hideOnMobile">
             <a href="#contact">Contact</a>
           </li>
-          <li onclick="showSidebar()" class="navbar-item menu-button">
-            <a href="#"
-              ><i class="fa-solid fa-bars" style="color: #ffffff"></i
-            ></a>
+
+          <!-- SINGLE TOGGLE BUTTON -->
+          <li class="navbar-item menu-button" onclick="toggleSidebar()">
+            <a href="#">
+              <i class="fa-solid fa-bars"></i>
+            </a>
           </li>
         </ul>
 
         <ul class="navbar-list-sidebar">
-          <li onclick="hideSidebar()" class="navbar-item">
-            <a href="#"
-              ><i class="fa-solid fa-xmark" style="color: #ffffff"></i
-            ></a>
-          </li>
           <li class="navbar-item"><a href="#about">About</a></li>
           <li class="navbar-item"><a href="#recipies">Recipies</a></li>
           <li class="navbar-item"><a href="#gallery">Gallery</a></li>
           <li class="navbar-item"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
+      <!-- overlay to close when clicking outside -->
+      <div class="nav-overlay" onclick="hideSidebar()"></div>
 
       <div class="video-container">
         <video class="bg-video" playsinline autoplay muted loop>

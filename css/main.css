@@ -11,22 +11,27 @@ body {
 
 .hero {
   width: 100%;
+  /* ===========================
+   OVERLAY – Darkens page only
+   =========================== */
 }
 .hero .video-container {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16/9;
+  height: 100dvh;
+  min-height: 100dvh;
+  max-height: 100dvh;
   overflow: hidden;
+  position: relative;
 }
 .hero .video-container::after {
-  content: "";
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
   z-index: 1;
+  content: "";
+  position: absolute;
 }
 .hero .video-container .bg-video {
   position: absolute;
@@ -40,7 +45,7 @@ body {
   z-index: 0;
 }
 .hero .navbar {
-  z-index: 2;
+  z-index: 10;
   position: absolute;
   top: 0;
   left: 0;
@@ -52,9 +57,18 @@ body {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   background-color: transparent;
-  background: none;
-  box-shadow: none;
+  transition: background-color 0.3s ease;
+  padding: 0.5rem 0;
   color: white;
+  /* ===========================
+   DROPDOWN / SLIDE MENU
+   =========================== */
+  /* Dropdown becomes visible when navbar has .nav-open */
+  /* Shared link styling */
+  /* When menu is open (nav has .nav-open), rotate the icon */
+}
+.hero .navbar.nav-open {
+  background-color: black;
 }
 .hero .navbar .navbar-left-side-small-container {
   display: flex;
@@ -79,6 +93,7 @@ body {
   font-family: "Hurricane", cursive;
   font-size: 3.5rem;
   text-transform: capitalize;
+  text-align: center;
 }
 .hero .navbar .navbar-list {
   justify-self: end;
@@ -90,24 +105,38 @@ body {
   gap: 70px;
 }
 .hero .navbar .navbar-list-sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 250px;
-  z-index: 999;
-  background-color: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 40vh;
+  background-color: black;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  /* Hidden by default – just tucked behind navbar */
+  transform: translateY(-16px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .hero .navbar .navbar-list-sidebar li,
 .hero .navbar .navbar-list-sidebar a {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  list-style: none;
+  text-align: center;
   width: 100%;
+}
+.hero .navbar .navbar-list-sidebar a {
+  border-bottom: 1px solid white;
+}
+.hero .navbar.nav-open .navbar-list-sidebar {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
 }
 .hero .navbar .navbar-list .navbar-item > a,
 .hero .navbar .navbar-list-sidebar .navbar-item > a {
@@ -120,6 +149,30 @@ body {
 .hero .navbar .navbar-list .navbar-item > a:hover,
 .hero .navbar .navbar-list-sidebar .navbar-item > a:hover {
   color: #ff9d00;
+}
+.hero .navbar .menu-button i {
+  display: inline-block;
+  font-size: 1.6rem;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.hero .navbar.nav-open .menu-button i {
+  transform: rotate(180deg);
+}
+.hero .nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.hero .navbar.nav-open + .nav-overlay {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .about-section-bg-img {
@@ -622,6 +675,33 @@ body {
    ========================================= */
 }
 @media (max-width: 991px) and (max-width: 576px) {
+  .hero .video-container .bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    height: 60dvh;
+    width: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: 1;
+  }
+  .hero .navbar .navbar-left-side-small-container {
+    padding-left: 0.7rem;
+  }
+  .hero .navbar .navbar-left-side-small-container .logo {
+    width: 50px;
+    height: 50px;
+  }
+  .hero .navbar .navbar-middle-text {
+    font-size: 2.8rem;
+  }
+  .hero .navbar .navbar-list {
+    margin-right: 0rem;
+  }
+  .hero .navbar .navbar-list .menu-button {
+    margin-right: 1.7rem;
+  }
   .about-section {
     padding: 0 1rem;
   }
