@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chef Christian - Recipes</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Hurricane&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/379551f863.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/recipes.css" />
+</head>
+
+<body>
+    <div class="navbar-container">
+        <nav class="navbar">
+            <div class="navbar-left-side-small-container">
+                <img class="logo" src="assets/Emblem-SMALL.png" alt="Logo" />
+                <span class="navbar-address hideOnMobile">
+                    <a target="_blank" href="https://www.ballymagarvey.ie/">
+                        Ballymagarvey Village <br />
+                        Balrath, Navan, Co. Meath, C15V67P <br />
+                        Ireland
+                    </a>
+                </span>
+            </div>
+
+            <span class="navbar-middle-text">Chef Christian</span>
+
+            <ul class="navbar-list hideOnMobile">
+                <li class="navbar-item hideOnMobile">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="navbar-item hideOnMobile">
+                    <a href="#gallery">Gallery</a>
+                </li>
+                <li class="navbar-item hideOnMobile">
+                    <a href="#contact">Contact</a>
+                </li>
+
+                <!-- SINGLE TOGGLE BUTTON -->
+                <li class="navbar-item menu-button" onclick="toggleSidebar()">
+                    <a href="#">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="navbar-list-sidebar">
+                <li class="navbar-item"><a href="index.html">Home</a></li>
+                <li class="navbar-item"><a href="#gallery">Gallery</a></li>
+                <li class="navbar-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-overlay" onclick="hideSidebar()"></div>
+    </div>
+
+    <!-- RECIPES PAGE CONTENT -->
+    <main class="recipes-page">
+        <!--  HERO BAND -->
+        <section class="recipes-hero">
+            <div class="recipes-hero__content">
+                <p class="recipes-hero__eyebrow">Recipes</p>
+                <h1 class="recipes-hero__title">A curated collection by Chef Christian</h1>
+                <p class="recipes-hero__subtitle">
+                    Each dish in this collection has been cooked, refined and served in Chef Christian’s kitchen.
+                    Some are signatures from private events, others are simple plates meant for everyday cooking at
+                    home.
+                </p>
+            </div>
+        </section>
+
+        <!-- SIMPLE FILTER BAR -->
+        <section class="recipes-filters">
+            <div class="recipes-filters__inner">
+                <button class="filter-pill filter-pill--active">All</button>
+                <button class="filter-pill">Starters</button>
+                <button class="filter-pill">Mains</button>
+                <button class="filter-pill">Desserts</button>
+                <button class="filter-pill">Seasonal</button>
+                <button class="filter-pill">Classics</button>
+            </div>
+        </section>
+
+        <!--  FEATURED RECIPE CONTENT -->
+        <section class="recipes-featured">
+            <div class="recipes-featured__inner">
+                <div class="recipes-featured__image"></div>
+
+                <div class="recipes-featured__content">
+                    <p class="recipes-featured__eyebrow">Featured this week</p>
+                    <h2 class="recipes-featured__title">
+                        Roasted Duck Breast with Cherry Gastrique
+                    </h2>
+                    <p class="recipes-featured__meta">
+                        ⏱ 45 min &nbsp;·&nbsp; Serves 2 &nbsp;·&nbsp; Intermediate
+                    </p>
+                    <p class="recipes-featured__text">
+                        Crisp skin, silky sauce and a simple plating guide. This is one of Chef Christian’s
+                        favourite dishes to serve at intimate dinners.
+                    </p>
+                    <p class="recipes-featured__quote">
+                        “I believe a memorable plate is built on three things: respect for ingredients,
+                        patience with technique, and a touch of surprise.”
+                    </p>
+                    <a href="#" class="recipes-featured__button">View recipe</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARDS GRID -->
+        <section class="cards-container">
+            <div class="cards">
+                <!-- CARD 1 -->
+                <article class="card card--1">
+                    <div class="card__info-hover">
+                        <div class="card__clock-info">
+                            <svg class="card__clock" viewBox="0 0 24 24">
+                                <path
+                                    d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
+                            </svg>
+                            <span class="card__time">15 min</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="#" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Recipe · Dessert</span>
+                        <h3 class="card__title">Lorem ipsum dolor sit amet.</h3>
+                        <span class="card__by">
+                            by <a href="#" class="card__author" title="author">Chef Christian</a>
+                        </span>
+                    </div>
+                </article>
+                <!-- CARD 2 -->
+                <article class="card card--2">
+                    <div class="card__info-hover">
+                        <div class="card__clock-info">
+                            <svg class="card__clock" viewBox="0 0 24 24">
+                                <path
+                                    d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
+                            </svg>
+                            <span class="card__time">15 min</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="#" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Recipe · Dessert</span>
+                        <h3 class="card__title">Lorem ipsum dolor sit amet.</h3>
+                        <span class="card__by">
+                            by <a href="#" class="card__author" title="author">Chef Christian</a>
+                        </span>
+                    </div>
+                </article>
+                <!-- CARD 3 -->
+                <article class="card card--3">
+                    <div class="card__info-hover">
+                        <div class="card__clock-info">
+                            <svg class="card__clock" viewBox="0 0 24 24">
+                                <path
+                                    d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
+                            </svg>
+                            <span class="card__time">15 min</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="#" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Recipe · Dessert</span>
+                        <h3 class="card__title">Lorem ipsum dolor sit amet.</h3>
+                        <span class="card__by">
+                            by <a href="#" class="card__author" title="author">Chef Christian</a>
+                        </span>
+                    </div>
+                </article>
+                <!-- CARD 4 -->
+                <article class="card card--4">
+                    <div class="card__info-hover">
+                        <div class="card__clock-info">
+                            <svg class="card__clock" viewBox="0 0 24 24">
+                                <path
+                                    d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
+                            </svg>
+                            <span class="card__time">15 min</span>
+                        </div>
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="#" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">Recipe · Dessert</span>
+                        <h3 class="card__title">Lorem ipsum dolor sit amet.</h3>
+                        <span class="card__by">
+                            by <a href="#" class="card__author" title="author">Chef Christian</a>
+                        </span>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
