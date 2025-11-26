@@ -16,6 +16,7 @@
     <script src="https://kit.fontawesome.com/379551f863.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/recipes.css" />
     <link rel="stylesheet" href="css/recipe-detail.css" />
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body class="recipe-detail-page">
@@ -44,7 +45,7 @@
                     <a href="recipes.html">Recipes</a>
                 </li>
                 <li class="navbar-item hideOnMobile">
-                    <a href="#contact">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </li>
 
                 <!-- SINGLE TOGGLE BUTTON - visible on mobile -->
@@ -58,7 +59,7 @@
             <ul class="navbar-list-sidebar">
                 <li class="navbar-item"><a href="index.html">Home</a></li>
                 <li class="navbar-item"><a href="recipes.html">Recipes</a></li>
-                <li class="navbar-item"><a href="#contact">Contact</a></li>
+                <li class="navbar-item"><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <div class="nav-overlay" onclick="hideSidebar()"></div>
@@ -67,6 +68,37 @@
         <main class="recipe-detail-main" id="recipe-detail">
             <!-- JS will inject everything here -->
         </main>
+
+        <!-- FOOTER SECTION -->
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <!-- BRAND AREA (logo + name = scroll to top) -->
+                <a href="index.html" class="footer-brand footer-scroll-top">
+                    <div class="footer-logo-wrap">
+                        <img src="assets/Emblem-SMALL.png" alt="Chef Christian logo" />
+                    </div>
+                    <span class="footer-brand-name">Chef Christian</span>
+                </a>
+
+                <!-- NAV LINKS -->
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="index.html" class="footer-link footer-home-link">Home</a>
+                    <a href="recipes.html" class="footer-link">Recipes</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </nav>
+            </div>
+
+            <!-- QUOTE -->
+            <p class="footer-quote">
+                “A memorable plate is built on three things: respect for ingredients, patience with technique, and a
+                touch of surprise.”
+            </p>
+
+            <!-- COPYRIGHT -->
+            <div class="footer-meta">
+                <span>&copy; 2025 – Made by Bau David</span>
+            </div>
+        </footer>
 
         <script src="js/main.js"></script>
         <script src="js/recipes-data.js"></script>

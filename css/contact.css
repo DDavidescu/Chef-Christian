@@ -1,0 +1,230 @@
+@charset "UTF-8";
+/* ===== CONTACT PAGE LAYOUT (ONE PAGE) ===== */
+.contact-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top, #111218, #050607 52%, #020203);
+  color: #f3f0eb;
+  overflow-x: hidden;
+}
+.contact-page .navbar-container {
+  flex-shrink: 0;
+}
+.contact-page .navbar-container .navbar {
+  background-color: black;
+}
+.contact-page .contact-section {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 7rem 6vw 3rem;
+}
+.contact-page .site-footer {
+  flex-shrink: 0;
+  margin-top: 0;
+  padding-top: 1.25rem;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  background: transparent;
+  /* LEFT SIDE */
+  /* RIGHT SIDE – FORM */
+  /* ===== RESPONSIVE ===== */
+  /* Tablet & small laptop */
+  /* Phone */
+}
+.contact-section .contact-inner {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact-section .contact-content {
+  flex: 1 1 320px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-section .contact-content .contact-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.3rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  color: #f8f5ef;
+}
+.contact-section .contact-content .contact-subtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(243, 240, 235, 0.85);
+  margin-bottom: 1.5rem;
+}
+.contact-section .contact-content .contact-details {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.contact-section .contact-content .contact-details p {
+  margin: 0 0 0.5rem;
+  color: rgba(243, 240, 235, 0.8);
+}
+.contact-section .contact-content .contact-details p span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.8rem;
+  color: #c9a16b;
+  margin-bottom: 0.1rem;
+}
+.contact-section .contact-content .contact-details p a {
+  color: rgba(243, 240, 235, 0.9);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201, 161, 107, 0.4);
+  padding-bottom: 0.05rem;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+.contact-section .contact-content .contact-details p a:hover {
+  color: #ffffff;
+  border-color: #c9a16b;
+}
+.contact-section .contact-form {
+  flex: 1 1 380px;
+  min-width: 280px;
+  max-width: 100%;
+  background: rgba(5, 6, 7, 0.85);
+  border-radius: 18px;
+  padding: 1.75rem 1.75rem 1.9rem;
+  border: 1px solid rgba(201, 161, 107, 0.45);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.65);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  box-sizing: border-box;
+}
+.contact-section .contact-form .form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.contact-section .contact-form .form-field {
+  flex: 1 1 160px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+.contact-section .contact-form .form-field label {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(243, 240, 235, 0.85);
+  margin-bottom: 0.25rem;
+}
+.contact-section .contact-form .form-field input,
+.contact-section .contact-form .form-field textarea {
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #f3f0eb;
+  background: rgba(11, 12, 15, 0.9);
+  border-radius: 10px;
+  border: 1px solid rgba(201, 161, 107, 0.35);
+  padding: 0.6rem 0.75rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-sizing: border-box;
+}
+.contact-section .contact-form .form-field input::-moz-placeholder, .contact-section .contact-form .form-field textarea::-moz-placeholder {
+  color: rgba(243, 240, 235, 0.45);
+}
+.contact-section .contact-form .form-field input::placeholder,
+.contact-section .contact-form .form-field textarea::placeholder {
+  color: rgba(243, 240, 235, 0.45);
+}
+.contact-section .contact-form .form-field input:focus,
+.contact-section .contact-form .form-field textarea:focus {
+  border-color: #e6c28b;
+  box-shadow: 0 0 0 1px rgba(230, 194, 139, 0.42);
+  background: rgba(11, 12, 15, 0.98);
+}
+.contact-section .contact-form .form-field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+.contact-section .contact-form .contact-submit {
+  margin-top: 0.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.9rem;
+  border-radius: 999px;
+  border: 1px solid #c9a16b;
+  background: linear-gradient(135deg, #c9a16b, #e6c28b);
+  color: #050607;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.contact-section .contact-form .contact-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+.contact-section .contact-form .contact-submit:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 900px) {
+  .contact-page .contact-section {
+    padding: 5.5rem 5vw 2.75rem;
+  }
+  .contact-section .contact-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .contact-section .contact-content,
+  .contact-section .contact-form {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .contact-section .contact-form {
+    margin-top: 1.5rem;
+  }
+  .contact-section .contact-form .form-field {
+    flex: 1 1 100%;
+  }
+  .contact-section .contact-form .contact-submit {
+    display: flex;
+    margin: 1rem auto 0;
+  }
+}
+@media (max-width: 575px) {
+  .contact-page .contact-section {
+    padding: 6rem 1.25rem 2.5rem;
+  }
+  .contact-section .contact-content .contact-title {
+    font-size: 2rem;
+  }
+  .contact-section .contact-content .contact-subtitle {
+    font-size: 0.98rem;
+  }
+  .contact-section .contact-inner {
+    gap: 1.75rem;
+  }
+  .contact-section .contact-form {
+    padding: 1.4rem 1.2rem 1.6rem;
+  }
+  .contact-section .contact-form .form-row {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=contact.css.map */

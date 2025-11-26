@@ -21,6 +21,127 @@ function hideSidebar() {
   icon.classList.add("fa-bars");
 }
 
+// ----- DESKTOP SCROLL-LOCK: HERO + FIRST ABOUT SECTION -----
+(function () {
+  const DESKTOP_BREAKPOINT = 992; // px
+
+  const heroSection = document.querySelector(".hero");
+  const aboutTitle = document.querySelector(".about-section-title-container");
+  const secondAboutTitle = document.querySelector(
+    ".second-about-section-title-container"
+  );
+
+  if (!heroSection || !aboutTitle) return;
+
+  // We snap between these two "slides":
+  // 1) Hero video
+  // 2) First About title + content (we snap to the title)
+  const snapSections = [heroSection, aboutTitle];
+
+  let isSnapping = false;
+  let currentIndex = 0;
+
+  function getScrollY() {
+    return window.scrollY || window.pageYOffset || 0;
+  }
+
+  function updateCurrentIndex() {
+    const scrollY = getScrollY();
+    let closestIndex = 0;
+    let minDistance = Infinity;
+
+    snapSections.forEach((section, index) => {
+      const top = section.getBoundingClientRect().top + window.pageYOffset;
+      const distance = Math.abs(top - scrollY);
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    currentIndex = closestIndex;
+  }
+
+  function withinSnapZone() {
+    const scrollY = getScrollY();
+
+    // End of the lock zone = start of the SECOND About section title
+    if (secondAboutTitle) {
+      const zoneEnd =
+        secondAboutTitle.getBoundingClientRect().top + window.pageYOffset;
+
+      // While the top of the viewport is above the second About title,
+      // we are in the snap zone.
+      return scrollY + 10 < zoneEnd;
+    }
+
+    // Fallback: if second title not found, just allow locking near the top
+    return scrollY < window.innerHeight * 1.5;
+  }
+
+  function snapTo(index) {
+    if (index < 0 || index >= snapSections.length) return;
+
+    isSnapping = true;
+    currentIndex = index;
+
+    snapSections[index].scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+    setTimeout(() => {
+      isSnapping = false;
+    }, 800); // match smooth scroll duration
+  }
+
+  function handleWheel(e) {
+    // Desktop only
+    if (window.innerWidth < DESKTOP_BREAKPOINT) return;
+
+    // Only lock in our defined zone (hero + first About)
+    if (!withinSnapZone()) return;
+
+    if (isSnapping) {
+      e.preventDefault();
+      return;
+    }
+
+    const delta = e.deltaY;
+    if (Math.abs(delta) < 10) return; // ignore tiny jitters
+
+    updateCurrentIndex();
+
+    if (delta > 0 && currentIndex < snapSections.length - 1) {
+      // Scroll down to About
+      e.preventDefault();
+      snapTo(currentIndex + 1);
+    } else if (delta < 0 && currentIndex > 0) {
+      // Scroll up back to Hero
+      e.preventDefault();
+      snapTo(currentIndex - 1);
+    }
+  }
+
+  window.addEventListener("wheel", handleWheel, { passive: false });
+
+  window.addEventListener("scroll", () => {
+    if (isSnapping) return;
+    if (window.innerWidth < DESKTOP_BREAKPOINT) return;
+    if (!withinSnapZone()) return;
+    updateCurrentIndex();
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= DESKTOP_BREAKPOINT) {
+      updateCurrentIndex();
+    }
+  });
+
+  // Initial index
+  updateCurrentIndex();
+})();
+
 // ABOUT SECTION
 document.addEventListener("DOMContentLoaded", function () {
   const revealElements = document.querySelectorAll(".reveal-on-scroll");
@@ -259,4 +380,30 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   observer.observe(awardsSection);
+});
+
+// FOOTER
+
+// Footer: brand + Home link scroll smoothly to top if already on index.html
+document.addEventListener("DOMContentLoaded", () => {
+  const isHomePage =
+    window.location.pathname.endsWith("index.html") ||
+    window.location.pathname === "/" ||
+    window.location.pathname === "";
+
+  const toTopElements = document.querySelectorAll(
+    ".footer-scroll-top, .footer-home-link"
+  );
+
+  if (!toTopElements.length) return;
+
+  toTopElements.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      if (isHomePage) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      // if not home, normal navigation to index.html is fine
+    });
+  });
 });
