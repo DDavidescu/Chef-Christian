@@ -8,7 +8,7 @@ $font-family: (
   ),
   secondary: (
     "Hurricane",
-    cursive,
+    serif,
   ),
 );
 
@@ -85,6 +85,10 @@ body {
     transition: background-color 0.3s ease;
     padding: 0.5rem 0;
     color: white;
+
+    .nav-link.active {
+      color: #ff9d00 
+    }
 
     &.nav-open {
       background-color: black;
@@ -187,7 +191,7 @@ body {
 
     .menu-button i {
       display: inline-block;
-      font-size: 1.6rem; 
+      font-size: 1.6rem;
       transition: transform 0.25s ease, opacity 0.25s ease;
     }
 
@@ -266,7 +270,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(246, 245, 243, 0.95); 
+    background-color: rgba(246, 245, 243, 0.95);
     gap: 1rem;
     color: black;
     width: 1000px;
@@ -650,7 +654,6 @@ body {
     }
   }
 }
-
 
 @media (min-width: 1450px) {
   .menu-button {

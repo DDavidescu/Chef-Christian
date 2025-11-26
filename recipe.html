@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe – Chef Christian</title>
+
+    <!-- FONTS (same as recipes.html) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Hurricane&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/379551f863.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/recipes.css" />
+    <link rel="stylesheet" href="css/recipe-detail.css" />
+</head>
+
+<body class="recipe-detail-page">
+
+    <div class="navbar-container">
+        <nav class="navbar">
+            <div class="navbar-left-side-small-container">
+                <img class="logo" src="assets/Emblem-SMALL.png" alt="Logo" />
+                <span class="navbar-address hideOnMobile">
+                    <a target="_blank" href="https://www.ballymagarvey.ie/">
+                        Ballymagarvey Village <br />
+                        Balrath, Navan, Co. Meath, C15V67P <br />
+                        Ireland
+                    </a>
+                </span>
+            </div>
+
+            <span class="navbar-middle-text">Chef Christian</span>
+
+            <!-- IMPORTANT: no hideOnMobile on this UL -->
+            <ul class="navbar-list">
+                <li class="navbar-item hideOnMobile">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="navbar-item hideOnMobile">
+                    <a href="recipes.html">Recipes</a>
+                </li>
+                <li class="navbar-item hideOnMobile">
+                    <a href="#contact">Contact</a>
+                </li>
+
+                <!-- SINGLE TOGGLE BUTTON - visible on mobile -->
+                <li class="navbar-item menu-button" onclick="toggleSidebar()">
+                    <a href="#">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="navbar-list-sidebar">
+                <li class="navbar-item"><a href="index.html">Home</a></li>
+                <li class="navbar-item"><a href="recipes.html">Recipes</a></li>
+                <li class="navbar-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-overlay" onclick="hideSidebar()"></div>
+
+
+        <main class="recipe-detail-main" id="recipe-detail">
+            <!-- JS will inject everything here -->
+        </main>
+
+        <script src="js/main.js"></script>
+        <script src="js/recipes-data.js"></script>
+        <script src="js/recipe-detail.js"></script>
+</body>
+
+</html>

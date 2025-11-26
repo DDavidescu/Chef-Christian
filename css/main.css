@@ -64,9 +64,9 @@ body {
   /* ===========================
    DROPDOWN / SLIDE MENU
    =========================== */
-  /* Dropdown becomes visible when navbar has .nav-open */
-  /* Shared link styling */
-  /* When menu is open (nav has .nav-open), rotate the icon */
+}
+.hero .navbar .nav-link.active {
+  color: #ff9d00;
 }
 .hero .navbar.nav-open {
   background-color: black;
@@ -91,7 +91,7 @@ body {
   color: rgb(210, 210, 210);
 }
 .hero .navbar .navbar-middle-text {
-  font-family: "Hurricane", cursive;
+  font-family: "Hurricane", serif;
   font-size: 3.5rem;
   text-transform: capitalize;
   text-align: center;
@@ -117,7 +117,6 @@ body {
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  /* Hidden by default – just tucked behind navbar */
   transform: translateY(-16px);
   opacity: 0;
   pointer-events: none;
@@ -205,7 +204,7 @@ body {
 .about-section .about-section-title-container .second-about-section-title,
 .about-section .second-about-section-title-container .about-section-title,
 .about-section .second-about-section-title-container .second-about-section-title {
-  font-family: "Hurricane", cursive;
+  font-family: "Hurricane", serif;
   color: black;
   width: 100%;
   font-size: 5rem;
@@ -321,7 +320,6 @@ body {
   height: 450px;
 }
 
-/* storytelling steps inside text boxes */
 .about-story-steps {
   display: flex;
   flex-direction: column;
@@ -354,7 +352,7 @@ body {
 }
 
 .about-award__value {
-  font-family: "Hurricane", cursive;
+  font-family: "Hurricane", serif;
   font-size: 2rem;
   color: #ad7d52;
   margin-bottom: 0.4rem;
@@ -566,7 +564,7 @@ body {
   text-decoration: none;
 }
 .site-footer .footer-inner .brand .logo-mark {
-  font-family: "Hurricane", cursive;
+  font-family: "Hurricane", serif;
   font-size: 3rem;
   text-transform: capitalize;
   color: white;

@@ -2,218 +2,440 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chef Christian - Recipes</title>
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Hurricane&display=swap" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/379551f863.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/recipes.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chef Christian - Recipes</title>
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Hurricane&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/379551f863.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/recipes.css" />
 </head>
 
 <body>
-    <div class="navbar-container">
-        <nav class="navbar">
-            <div class="navbar-left-side-small-container">
-                <img class="logo" src="assets/Emblem-SMALL.png" alt="Logo" />
-                <span class="navbar-address hideOnMobile">
-                    <a target="_blank" href="https://www.ballymagarvey.ie/">
-                        Ballymagarvey Village <br />
-                        Balrath, Navan, Co. Meath, C15V67P <br />
-                        Ireland
-                    </a>
-                </span>
-            </div>
+  <div class="navbar-container">
+    <nav class="navbar">
+      <div class="navbar-left-side-small-container">
+        <img class="logo" src="assets/Emblem-SMALL.png" alt="Logo" />
+        <span class="navbar-address hideOnMobile">
+          <a target="_blank" href="https://www.ballymagarvey.ie/">
+            Ballymagarvey Village <br />
+            Balrath, Navan, Co. Meath, C15V67P <br />
+            Ireland
+          </a>
+        </span>
+      </div>
 
-            <span class="navbar-middle-text">Chef Christian</span>
+      <span class="navbar-middle-text">Chef Christian</span>
 
-            <ul class="navbar-list hideOnMobile">
-                <li class="navbar-item hideOnMobile">
-                    <a href="index.html">Home</a>
-                </li>
-                <li class="navbar-item hideOnMobile">
-                    <a href="#gallery">Gallery</a>
-                </li>
-                <li class="navbar-item hideOnMobile">
-                    <a href="#contact">Contact</a>
-                </li>
+      <ul class="navbar-list hideOnMobile">
+        <li class="navbar-item hideOnMobile">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="navbar-item hideOnMobile">
+          <a href="#">Recipes</a>
+        </li>
+        <li class="navbar-item hideOnMobile">
+          <a href="#contact">Contact</a>
+        </li>
 
-                <!-- SINGLE TOGGLE BUTTON -->
-                <li class="navbar-item menu-button" onclick="toggleSidebar()">
-                    <a href="#">
-                        <i class="fa-solid fa-bars"></i>
-                    </a>
-                </li>
-            </ul>
+        <!-- SINGLE TOGGLE BUTTON -->
+        <li class="navbar-item menu-button" onclick="toggleSidebar()">
+          <a href="#">
+            <i class="fa-solid fa-bars"></i>
+          </a>
+        </li>
+      </ul>
 
-            <ul class="navbar-list-sidebar">
-                <li class="navbar-item"><a href="index.html">Home</a></li>
-                <li class="navbar-item"><a href="#gallery">Gallery</a></li>
-                <li class="navbar-item"><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="nav-overlay" onclick="hideSidebar()"></div>
-    </div>
+      <ul class="navbar-list-sidebar">
+        <li class="navbar-item"><a href="index.html">Home</a></li>
+        <li class="navbar-item"><a href="#">Recipes</a></li>
+        <li class="navbar-item"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-overlay" onclick="hideSidebar()"></div>
+  </div>
 
-    <!-- RECIPES PAGE CONTENT -->
-    <main class="recipes-page">
-        <!--  HERO BAND -->
-        <section class="recipes-hero">
-            <div class="recipes-hero__content">
-                <p class="recipes-hero__eyebrow">Recipes</p>
-                <h1 class="recipes-hero__title">A curated collection by Chef Christian</h1>
-                <p class="recipes-hero__subtitle">
-                    Each dish in this collection has been cooked, refined and served in Chef Christian’s kitchen.
-                    Some are signatures from private events, others are simple plates meant for everyday cooking at
-                    home.
-                </p>
-            </div>
-        </section>
+  <!-- RECIPES PAGE CONTENT -->
+  <main class="recipes-page">
+    <!-- PANEL 1: Hero + Featured -->
+    <section class="recipes-panel" id="panel-1">
+      <!--  HERO BAND -->
+      <section class="recipes-hero">
+        <div class="recipes-hero__content">
+          <p class="recipes-hero__eyebrow">Recipes</p>
+          <h1 class="recipes-hero__title">
+            A curated collection by Chef Christian
+          </h1>
+          <p class="recipes-hero__subtitle">
+            Each dish in this collection has been cooked, refined and served in
+            Chef Christian’s kitchen. Some are signatures from private events,
+            others are simple plates meant for everyday cooking at home.
+          </p>
+        </div>
+      </section>
 
-        <!-- SIMPLE FILTER BAR -->
-        <section class="recipes-filters">
-            <div class="recipes-filters__inner">
-                <button class="filter-pill filter-pill--active">All</button>
-                <button class="filter-pill">Starters</button>
-                <button class="filter-pill">Mains</button>
-                <button class="filter-pill">Desserts</button>
-                <button class="filter-pill">Seasonal</button>
-                <button class="filter-pill">Classics</button>
-            </div>
-        </section>
+      <!--  FEATURED RECIPE CONTENT -->
+      <section class="recipes-featured">
+        <div class="recipes-featured__inner">
+          <div class="recipes-featured__image"></div>
 
-        <!--  FEATURED RECIPE CONTENT -->
-        <section class="recipes-featured">
-            <div class="recipes-featured__inner">
-                <div class="recipes-featured__image"></div>
+          <div class="recipes-featured__content">
+            <p class="recipes-featured__eyebrow">Favourite Lorem, ipsum.</p>
+            <h2 class="recipes-featured__title">
+              Roasted Duck Breast with Cherry Gastrique
+            </h2>
+            <p class="recipes-featured__meta">
+              ⏱ 45 min &nbsp;·&nbsp; Serves 2 &nbsp;·&nbsp; Intermediate
+            </p>
+            <p class="recipes-featured__text">
+              Crisp skin, silky sauce and a simple plating guide. This is one of
+              Chef Christian’s favourite dishes to serve at intimate dinners.
+            </p>
+            <p class="recipes-featured__quote">
+              “I believe a memorable plate is built on three things: respect for
+              ingredients, patience with technique, and a touch of surprise.”
+            </p>
+            <a href="recipe.html?id=roasted-duck-breast-cherry-gastrique" class="recipes-featured__button">View recipe</a>
+          </div>
+        </div>
+      </section>
+    </section>
 
-                <div class="recipes-featured__content">
-                    <p class="recipes-featured__eyebrow">Featured this week</p>
-                    <h2 class="recipes-featured__title">
-                        Roasted Duck Breast with Cherry Gastrique
-                    </h2>
-                    <p class="recipes-featured__meta">
-                        ⏱ 45 min &nbsp;·&nbsp; Serves 2 &nbsp;·&nbsp; Intermediate
-                    </p>
-                    <p class="recipes-featured__text">
-                        Crisp skin, silky sauce and a simple plating guide. This is one of Chef Christian’s
-                        favourite dishes to serve at intimate dinners.
-                    </p>
-                    <p class="recipes-featured__quote">
-                        “I believe a memorable plate is built on three things: respect for ingredients,
-                        patience with technique, and a touch of surprise.”
-                    </p>
-                    <a href="#" class="recipes-featured__button">View recipe</a>
+    <!-- PANEL 2: Intro + Starters -->
+    <section class="recipes-panel" id="panel-2">
+      <!-- INTRO COPY -->
+      <section class="recipes-intro">
+        <div class="recipes-intro__inner">
+          <h2 class="recipes-intro__title">Lorem ipsum dolor sit amet.</h2>
+          <p class="recipes-intro__text">
+            This collection blends wedding-worthy plates with everyday comfort
+            cooking.
+          </p>
+          <p class="recipes-intro__text">
+            Signature dishes are marked and accompanied by tasting notes.
+            Seasonal menus are inspired by local produce from the Ballymagarvey
+            gardens and surrounding farms.
+          </p>
+
+          <div class="section-divider"></div>
+        </div>
+      </section>
+
+      <!-- ========================= -->
+      <!--      STARTERS SECTION     -->
+      <!-- ========================= -->
+      <section class="recipes-category recipes-category--left" data-category="starters">
+        <div class="recipes-category__inner">
+          <header class="recipes-category__header">
+            <p class="recipes-category__eyebrow">Starters</p>
+            <h2 class="recipes-category__title">
+              Light beginnings for any celebration
+            </h2>
+            <p class="recipes-category__description">
+              Fresh, elegant and composed plates that set the tone for the meal.
+            </p>
+          </header>
+
+          <div class="recipes-category__row">
+            <!-- BIG CARD under left-aligned title -->
+            <article class="card card--featured-small card--starters-featured" data-recipe-id="seared-scallops-lemon-thyme-butter">
+              <div class="card__info-hover">
+                <div class="card__clock-info">
+                  <svg class="card__clock" viewBox="0 0 24 24">
+                    <path
+                      d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
+                  </svg>
+                  <span class="card__time">30 min</span>
                 </div>
-            </div>
-        </section>
+              </div>
 
-        <!-- CARDS GRID -->
-        <section class="cards-container">
-            <div class="cards">
-                <!-- CARD 1 -->
-                <article class="card card--1">
-                    <div class="card__info-hover">
-                        <div class="card__clock-info">
-                            <svg class="card__clock" viewBox="0 0 24 24">
-                                <path
-                                    d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
-                            </svg>
-                            <span class="card__time">15 min</span>
-                        </div>
-                    </div>
-                    <div class="card__img"></div>
-                    <a href="#" class="card_link">
-                        <div class="card__img--hover"></div>
-                    </a>
-                    <div class="card__info">
-                        <span class="card__category">Recipe · Dessert</span>
-                        <h3 class="card__title">Lorem ipsum dolor sit amet.</h3>
-                        <span class="card__by">
-                            by <a href="#" class="card__author" title="author">Chef Christian</a>
-                        </span>
-                    </div>
-                </article>
-                <!-- CARD 2 -->
-                <article class="card card--2">
-                    <div class="card__info-hover">
-                        <div class="card__clock-info">
-                            <svg class="card__clock" viewBox="0 0 24 24">
-                                <path
-                                    d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
-                            </svg>
-                            <span class="card__time">15 min</span>
-                        </div>
-                    </div>
-                    <div class="card__img"></div>
-                    <a href="#" class="card_link">
-                        <div class="card__img--hover"></div>
-                    </a>
-                    <div class="card__info">
-                        <span class="card__category">Recipe · Dessert</span>
-                        <h3 class="card__title">Lorem ipsum dolor sit amet.</h3>
-                        <span class="card__by">
-                            by <a href="#" class="card__author" title="author">Chef Christian</a>
-                        </span>
-                    </div>
-                </article>
-                <!-- CARD 3 -->
-                <article class="card card--3">
-                    <div class="card__info-hover">
-                        <div class="card__clock-info">
-                            <svg class="card__clock" viewBox="0 0 24 24">
-                                <path
-                                    d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
-                            </svg>
-                            <span class="card__time">15 min</span>
-                        </div>
-                    </div>
-                    <div class="card__img"></div>
-                    <a href="#" class="card_link">
-                        <div class="card__img--hover"></div>
-                    </a>
-                    <div class="card__info">
-                        <span class="card__category">Recipe · Dessert</span>
-                        <h3 class="card__title">Lorem ipsum dolor sit amet.</h3>
-                        <span class="card__by">
-                            by <a href="#" class="card__author" title="author">Chef Christian</a>
-                        </span>
-                    </div>
-                </article>
-                <!-- CARD 4 -->
-                <article class="card card--4">
-                    <div class="card__info-hover">
-                        <div class="card__clock-info">
-                            <svg class="card__clock" viewBox="0 0 24 24">
-                                <path
-                                    d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
-                            </svg>
-                            <span class="card__time">15 min</span>
-                        </div>
-                    </div>
-                    <div class="card__img"></div>
-                    <a href="#" class="card_link">
-                        <div class="card__img--hover"></div>
-                    </a>
-                    <div class="card__info">
-                        <span class="card__category">Recipe · Dessert</span>
-                        <h3 class="card__title">Lorem ipsum dolor sit amet.</h3>
-                        <span class="card__by">
-                            by <a href="#" class="card__author" title="author">Chef Christian</a>
-                        </span>
-                    </div>
-                </article>
-            </div>
-        </section>
-    </main>
+              <div class="card__img"></div>
+              <div class="card__img--hover"></div>
+
+              <div class="card__info">
+                <span class="card__category">Starter · Signature</span>
+                <h3 class="card__title">
+                  Seared Scallops with Lemon Thyme Butter
+                </h3>
+                <span class="card__by">by <a href="#" class="card__author">Chef Christian</a></span>
+              </div>
+            </article>
+
+            <!-- SMALL CARDS on the right -->
+            <article class="card card--1" data-recipe-id="crispy-chicken-bites-cucumber">
+              <div class="card__info-hover">
+                <div class="card__clock-info">
+                  <svg class="card__clock" viewBox="0 0 24 24">
+                    <path
+                      d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
+                  </svg>
+                  <span class="card__time">20 min</span>
+                </div>
+              </div>
+
+              <div class="card__img"></div>
+              <div class="card__img--hover"></div>
+
+              <div class="card__info">
+                <span class="card__category">Starter</span>
+                <h3 class="card__title">Crispy Chicken Bites with Cucumber</h3>
+                <span class="card__by">by <a href="#" class="card__author">Chef Christian</a></span>
+              </div>
+            </article>
+
+            <article class="card card--2" data-recipe-id="tomato-tartare-basil-oil">
+              <div class="card__info-hover">
+                <div class="card__clock-info">
+                  <svg class="card__clock" viewBox="0 0 24 24">
+                    <path
+                      d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
+                  </svg>
+                  <span class="card__time">15 min</span>
+                </div>
+              </div>
+
+              <div class="card__img"></div>
+              <div class="card__img--hover"></div>
+
+              <div class="card__info">
+                <span class="card__category">Starter</span>
+                <h3 class="card__title">Tomato Tartare with Basil Oil</h3>
+                <span class="card__by">by <a href="#" class="card__author">Chef Christian</a></span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- PANEL 3: Story #1 + Mains -->
+    <section class="recipes-panel" id="panel-3">
+      <!-- STORY #1 -->
+      <section class="recipes-story">
+        <div class="recipes-story__inner">
+          <p class="recipes-story__eyebrow">In the Ballymagarvey kitchen</p>
+          <h2 class="recipes-story__title">
+            Every menu begins with a conversation
+          </h2>
+          <p class="recipes-story__text">
+            Before a single pan is warmed, we talk about the couple, their
+            families and the kind of evening they imagine. The dishes you see
+            here are shaped by those stories – from late-summer weddings filled
+            with garden herbs to winter celebrations built around slow braises
+            and rich sauces.
+          </p>
+
+          <div class="section-divider"></div>
+        </div>
+      </section>
+      <!-- ========================= -->
+      <!--        MAINS SECTION      -->
+      <!-- ========================= -->
+      <section class="recipes-category recipes-category--right" data-category="mains">
+        <div class="recipes-category__inner">
+          <header class="recipes-category__header">
+            <p class="recipes-category__eyebrow">Mains</p>
+            <h2 class="recipes-category__title">
+              Centrepiece dishes crafted with care
+            </h2>
+            <p class="recipes-category__description">
+              From slow-cooked meats to refined fish plates, each dish balances
+              depth and simplicity.
+            </p>
+          </header>
+
+          <div class="recipes-category__row">
+            <!-- SMALL CARDS FIRST -->
+            <article class="card card--3" data-recipe-id="pan-roasted-salmon-herb-cream">
+              <div class="card__info-hover">
+                <div class="card__clock-info">
+                  <svg class="card__clock" viewBox="0 0 24 24">
+                    <path
+                      d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
+                  </svg>
+                  <span class="card__time">35 min</span>
+                </div>
+              </div>
+
+              <div class="card__img"></div>
+              <div class="card__img--hover"></div>
+
+              <div class="card__info">
+                <span class="card__category">Main</span>
+                <h3 class="card__title">Pan-Roasted Salmon with Herb Cream</h3>
+                <span class="card__by">by <a href="#" class="card__author">Chef Christian</a></span>
+              </div>
+            </article>
+
+            <article class="card card--4" data-recipe-id="wild-mushroom-risotto">
+              <div class="card__info-hover">
+                <div class="card__clock-info">
+                  <svg class="card__clock" viewBox="0 0 24 24">
+                    <path
+                      d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
+                  </svg>
+                  <span class="card__time">40 min</span>
+                </div>
+              </div>
+
+              <div class="card__img"></div>
+              <div class="card__img--hover"></div>
+
+              <div class="card__info">
+                <span class="card__category">Main</span>
+                <h3 class="card__title">Wild Mushroom Risotto</h3>
+                <span class="card__by">by <a href="#" class="card__author">Chef Christian</a></span>
+              </div>
+            </article>
+
+            <!-- BIG CARD under right-aligned title -->
+            <article class="card card--featured-small card--mains-featured" data-recipe-id="fillet-of-beef-red-wine-jus">
+              <div class="card__info-hover">
+                <div class="card__clock-info">
+                  <svg class="card__clock" viewBox="0 0 24 24">
+                    <path
+                      d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
+                  </svg>
+                  <span class="card__time">1 h</span>
+                </div>
+              </div>
+
+              <div class="card__img"></div>
+              <div class="card__img--hover"></div>
+
+              <div class="card__info">
+                <span class="card__category">Main · Signature</span>
+                <h3 class="card__title">Fillet of Beef with Red Wine Jus</h3>
+                <span class="card__by">by <a href="#" class="card__author">Chef Christian</a></span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="recipes-panel" id="panel-4">
+      <!-- STORY #2 -->
+      <section class="recipes-story">
+        <div class="recipes-story__inner">
+          <p class="recipes-story__eyebrow">
+            From wedding banquets to home kitchens
+          </p>
+          <h2 class="recipes-story__title">
+            The same care, whatever the table size
+          </h2>
+          <p class="recipes-story__text">
+            Many of these recipes began as dishes served to hundreds of guests.
+            Here they are scaled, refined and adapted for smaller gatherings –
+            keeping the flavour and intention, while making them achievable at
+            home.
+          </p>
+
+          <div class="section-divider"></div>
+        </div>
+      </section>
+
+      <!-- ========================= -->
+      <!--      DESSERTS SECTION     -->
+      <!-- ========================= -->
+      <section class="recipes-category recipes-category--left" data-category="desserts">
+        <div class="recipes-category__inner">
+          <header class="recipes-category__header">
+            <p class="recipes-category__eyebrow">Desserts</p>
+            <h2 class="recipes-category__title">
+              Sweet finishes crafted with elegance
+            </h2>
+            <p class="recipes-category__description">
+              Balanced, refined desserts inspired by the seasons.
+            </p>
+          </header>
+
+          <div class="recipes-category__row">
+            <!-- BIG CARD under left-aligned title -->
+            <article class="card card--featured-small card--desserts-featured" data-recipe-id="vanilla-choux-hazelnut-praline">
+              <div class="card__info-hover">
+                <div class="card__clock-info">
+                  <svg class="card__clock" viewBox="0 0 24 24">
+                    <path
+                      d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
+                  </svg>
+                  <span class="card__time">50 min</span>
+                </div>
+              </div>
+
+              <div class="card__img"></div>
+              <div class="card__img--hover"></div>
+
+              <div class="card__info">
+                <span class="card__category">Dessert · Signature</span>
+                <h3 class="card__title">Vanilla Choux with Hazelnut Praline</h3>
+                <span class="card__by">by <a href="#" class="card__author">Chef Christian</a></span>
+              </div>
+            </article>
+
+            <!-- SMALL CARDS on the right -->
+            <article class="card card--1" data-recipe-id="lemon-tart-honey-cream">
+              <div class="card__info-hover">
+                <div class="card__clock-info">
+                  <svg class="card__clock" viewBox="0 0 24 24">
+                    <path
+                      d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
+                  </svg>
+                  <span class="card__time">25 min</span>
+                </div>
+              </div>
+
+              <div class="card__img"></div>
+              <div class="card__img--hover"></div>
+
+              <div class="card__info">
+                <span class="card__category">Dessert</span>
+                <h3 class="card__title">Lemon Tart with Honey Cream</h3>
+                <span class="card__by">by <a href="#" class="card__author">Chef Christian</a></span>
+              </div>
+            </article>
+
+            <article class="card card--2" data-recipe-id="dark-chocolate-mousse">
+              <div class="card__info-hover">
+                <div class="card__clock-info">
+                  <svg class="card__clock" viewBox="0 0 24 24">
+                    <path
+                      d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
+                  </svg>
+                  <span class="card__time">15 min</span>
+                </div>
+              </div>
+
+              <div class="card__img"></div>
+              <div class="card__img--hover"></div>
+
+              <div class="card__info">
+                <span class="card__category">Dessert</span>
+                <h3 class="card__title">Dark Chocolate Mousse</h3>
+                <span class="card__by">by <a href="#" class="card__author">Chef Christian</a></span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <!-- Scroll bullets -->
+  <div class="recipes-scroll-nav">
+    <button class="recipes-scroll-dot is-active" type="button" data-panel="panel-1"
+      aria-label="Featured recipes"></button>
+    <button class="recipes-scroll-dot" type="button" data-panel="panel-2" aria-label="Starters"></button>
+    <button class="recipes-scroll-dot" type="button" data-panel="panel-3" aria-label="Mains"></button>
+    <button class="recipes-scroll-dot" type="button" data-panel="panel-4" aria-label="Desserts"></button>
+  </div>
 
 
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/recipes-overview.js"></script>
 </body>
 
 </html>
