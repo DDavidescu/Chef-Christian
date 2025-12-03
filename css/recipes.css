@@ -642,9 +642,6 @@ body::before {
 /* =======================
    RESPONSIVE
    ======================= */
-/* =======================
-   RESPONSIVE
-   ======================= */
 /* very large desktops */
 @media (min-width: 1450px) {
   .menu-button {
@@ -661,6 +658,20 @@ body::before {
   }
   .recipes-scroll-nav {
     display: none;
+  }
+}
+/* desktop & tablets */
+@media (max-width: 1400px) {
+  .recipes-hero {
+    /* move content down so it clears the fixed nav */
+    padding-top: 6rem;
+  }
+  .recipes-hero__eyebrow {
+    position: static;
+    transform: none;
+    margin-bottom: 0.9rem;
+    display: block;
+    z-index: 1;
   }
 }
 /* medium desktops / large laptops */
@@ -682,22 +693,29 @@ body::before {
     align-items: center;
   }
   .recipes-category.recipes-category--right .recipes-category__row {
-    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.2rem;
+    overflow: visible;
   }
   .recipes-category .recipes-category__inner {
     max-width: 1000px;
   }
-  .recipes-category .card {
-    width: 280px;
-  }
-  .recipes-category .card--featured-small {
-    width: 460px;
+  .recipes-category .recipes-category__row .card,
+  .recipes-category .recipes-category__row .card--featured-small {
+    flex: 0 1 calc((100% - 2.4rem) / 3);
+    max-width: 320px;
+    min-width: 0;
   }
 }
-/* laptops / small desktops */
+/* laptops / small desktops (tablet landscape like iPad Air) */
 @media (max-width: 992px) {
   .recipes-hero {
-    padding: 7rem 1.5rem 2.5rem;
+    min-height: auto;
+    align-items: flex-start;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    overflow: visible;
   }
   .recipes-hero .recipes-hero__title {
     font-size: clamp(2.4rem, 3.2vw, 3rem);
@@ -738,19 +756,23 @@ body::before {
     text-align: center;
     max-width: 640px;
   }
-  .recipes-category .recipes-category__row {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
   .recipes-category .card,
   .recipes-category .card--featured-small {
-    width: 320px;
-  }
-  .recipes-category .card--featured-small {
-    max-width: 520px;
+    width: auto;
+    flex: 0 1 calc((100% - 2.4rem) / 3);
+    max-width: 320px;
+    min-width: 0;
   }
 }
-/* tablets */
+@media (max-height: 800px) and (min-width: 768px) {
+  .recipes-hero {
+    align-items: flex-start;
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+    overflow: visible;
+  }
+}
+/* tablets portrait and below */
 @media (max-width: 768px) {
   .recipes-hero {
     padding: 1rem 1.2rem 2.2rem;
@@ -787,6 +809,7 @@ body::before {
   }
   .recipes-category .card,
   .recipes-category .card--featured-small {
+    flex: 0 1 auto;
     width: 100%;
     max-width: 440px;
   }
@@ -842,5 +865,10 @@ body::before {
   .section-divider {
     width: 220px;
     margin-top: 2.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .recipes-hero {
+    padding-top: 5.5rem;
   }
 }/*# sourceMappingURL=recipes.css.map */

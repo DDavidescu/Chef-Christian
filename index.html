@@ -32,7 +32,9 @@
     <section class="hero">
       <nav class="navbar">
         <div class="navbar-left-side-small-container">
-          <img class="logo" src="assets/Emblem-SMALL.png" alt="Logo" />
+          <a href="index.html">
+            <img class="logo" src="assets/Emblem-SMALL.png" alt="Logo" />
+          </a>
           <span class="navbar-address hideOnMobile">
             <a target="_blank" href="https://www.ballymagarvey.ie/">
               Ballymagarvey Village <br />
@@ -42,7 +44,13 @@
           </span>
         </div>
 
-        <span class="navbar-middle-text">Chef Christian</span>
+        <a
+          href="index.html"
+          class="navbar-middle-text"
+          style="text-decoration: none; color: inherit"
+        >
+          Chef Christian
+        </a>
 
         <ul class="navbar-list hideOnMobile">
           <li class="navbar-item hideOnMobile"><a href="#">Home</a></li>
@@ -508,35 +516,45 @@
     </div>
 
     <!-- FOOTER SECTION -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <!-- BRAND AREA (logo + name = scroll to top) -->
-    <a href="index.html" class="footer-brand footer-scroll-top">
-      <div class="footer-logo-wrap">
-        <img src="assets/Emblem-SMALL.png" alt="Chef Christian logo" />
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <!-- BRAND AREA (logo + name = scroll to top) -->
+        <a href="index.html" class="footer-brand footer-scroll-top">
+          <div class="footer-logo-wrap">
+            <img src="assets/Emblem-SMALL.png" alt="Chef Christian logo" />
+          </div>
+          <span class="footer-brand-name">Chef Christian</span>
+        </a>
+
+        <!-- NAV LINKS -->
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="index.html" class="footer-link footer-home-link">Home</a>
+          <a href="recipes.html" class="footer-link">Recipes</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </nav>
       </div>
-      <span class="footer-brand-name">Chef Christian</span>
-    </a>
 
-    <!-- NAV LINKS -->
-    <nav class="footer-nav" aria-label="Footer navigation">
-      <a href="index.html" class="footer-link footer-home-link">Home</a>
-      <a href="recipes.html" class="footer-link">Recipes</a>
-      <a href="contact.html" class="footer-link">Contact</a>
-    </nav>
-  </div>
+      <!-- QUOTE -->
+      <p class="footer-quote">
+        “A memorable plate is built on three things: respect for ingredients,
+        patience with technique, and a touch of surprise.”
+      </p>
 
-  <!-- QUOTE -->
-  <p class="footer-quote">
-    “A memorable plate is built on three things: respect for ingredients, patience with technique, and a touch of surprise.”
-  </p>
-
-  <!-- COPYRIGHT -->
-  <div class="footer-meta">
-    <span>&copy; 2025 – Made by Bau David</span>
-  </div>
-</footer>
-
+      <!-- COPYRIGHT -->
+      <div class="footer-meta">
+        <span>
+          &copy; 2025 – Made by
+          <a
+            href="https://bau-david-portofolio.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-author-link"
+          >
+            Bau David
+          </a>
+        </span>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

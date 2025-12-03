@@ -8,7 +8,7 @@ window.RECIPES = [
     duration: 45,
     difficulty: "intermediate",
     serves: 2,
-    image: "assets/duck-breast.jpg", // change to your asset
+    image: "assets/pexels-photo-769289.jpeg", 
     description:
       "Crisp-skinned duck breast served with a bright, glossy cherry gastrique.",
     ingredients: [
@@ -63,7 +63,7 @@ window.RECIPES = [
     duration: 20,
     difficulty: "easy",
     serves: 4,
-    image: "assets/chicken-bites.jpg", // adjust to real asset
+    image: "assets/03bec401-2114-446e-a3b7-b8117e6dc82d.jfif", 
     description:
       "Lightly spiced crispy chicken served with a refreshing cucumber garnish.",
     ingredients: [
@@ -171,7 +171,7 @@ window.RECIPES = [
     duration: 60,
     difficulty: "advanced",
     serves: 2,
-    image: "assets/fillet-beef.jpg", // set real asset
+    image: "assets/a8561b5b-cee6-47b7-aa6d-929479315a51.jfif", 
     description:
       "Tender beef fillet with a deeply reduced red wine jus, ideal for celebrations.",
     ingredients: [
@@ -246,7 +246,7 @@ window.RECIPES = [
     duration: 15,
     difficulty: "easy",
     serves: 4,
-    image: "assets/dark-chocolate-mousse.jpg",
+    image: "assets/d593207f-8a39-43ec-b362-1f1c5bb85ebe.jfif",
     description:
       "Rich but airy dark chocolate mousse, perfect for make-ahead dessert.",
     ingredients: [
